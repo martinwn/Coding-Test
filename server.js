@@ -5,20 +5,19 @@ const data = require("./data/generated");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-// Define middleware here
+// Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-// Serve up static assets (usually on heroku)
+// Static Assets
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// Define API routes here
+// API Routes
 app.get("/api/data", (req, res) => {
   res.send(data);
 });
-// Send every other request to the React app
-// Define any API routes before this runs
+
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
