@@ -73,7 +73,7 @@ class ScrollableTabsButtonAuto extends React.Component {
                       <PayeeCard data={data.Payee} />
                     </Paper>
                   </Grid>
-                  <Grid item md={4} xs={8}>
+                  <Grid item md={4} xs={12}>
                     <Paper className={classes.paper}>
                       <PaymentCard data={data.Payment} />
                     </Paper>
