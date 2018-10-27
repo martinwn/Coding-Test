@@ -13,12 +13,8 @@ const StyledParagraph = styled.p`
 
 const styles = {
   card: {
-    minWidth: 275
-  },
-  bullet: {
-    display: "inline-block",
-    margin: "0 2px",
-    transform: "scale(0.8)"
+    minWidth: 275,
+    minHeight: "100%"
   },
   title: {
     fontSize: 14
